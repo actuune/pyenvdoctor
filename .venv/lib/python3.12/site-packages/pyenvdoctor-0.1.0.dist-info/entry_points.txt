@@ -1,4 +1,0 @@
-[console_scripts]
-pyenvdoctor = pyenvdoctor.cli.commands:main
-pyenvdoctor-fix = pyenvdoctor.fixer:fix_cli
-pyenvdoctor-scan = pyenvdoctor.scanner:scan_cli
