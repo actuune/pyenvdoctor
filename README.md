@@ -1,5 +1,5 @@
 
-PyEnvDoctor is your intelligent Python environment health diagnostic tool. Like a doctor for your Python environments, it examines, diagnoses, and provides actionable recommendations to keep your Python development environments healthy and secure.
+PyEnvDoctor created by SAMY is your intelligent Python environment health diagnostic tool. Like a doctor for your Python environments, it examines, diagnoses, and provides actionable recommendations to keep your Python development environments healthy and secure.
 
 Installation
 bash# Install via pip
