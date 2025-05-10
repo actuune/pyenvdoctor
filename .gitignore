@@ -4,63 +4,37 @@ __pycache__/
 *$py.class
 *.so
 .Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-
-# Virtual Environment
-.venv/
-venv/
-ENV/
 env/
+venv/
+.venv/
+ENV/
+pip-log.txt
+pip-delete-this-directory.txt
 
 # Testing
 .coverage
 .pytest_cache/
-.tox/
 htmlcov/
+.tox/
 
-# IDEs
+# IDE
 .vscode/
 .idea/
 *.swp
 *.swo
-*~
 
-# macOS
-.DS_Store
-
-# Logs
-*.log
-*.log.*
+# Build
+build/
+dist/
+*.egg-info/
+.eggs/
 
 # Local files
-*.backup
-*.backup-*
+*.log
+*.log.*
+.DS_Store
 
 # Temporary files
 /tmp/
-*.tmp
-
-# Editor files
-*.sublime-workspace
-*.sublime-project
-
-# Documentation builds
-docs/_build/
-
-# Database
-*.db
-*.sqlite3
+*.backup
+*.backup-*
