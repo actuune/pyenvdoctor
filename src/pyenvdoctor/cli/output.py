@@ -13,3 +13,9 @@ def print_installations_table(installations):
         table.add_row(install.path, install.version, install.provider)
     
     console.print(table)
+
+def display_scan_results(installations):
+    table = Table(title="Python Installations")
+    table.add_column("Version", style="cyan")
+    table.add_column("Chemin", style="green")
+    # Ajouter plus de colonnes...

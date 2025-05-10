@@ -1,0 +1,2 @@
+[console_scripts]
+pyenvdoctor = pyenvdoctor.cli.commands:main
