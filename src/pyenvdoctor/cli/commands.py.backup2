@@ -1,0 +1,79 @@
+import argparse
+from rich.console import Console
+from ..scanner.system_scanner import SystemScanner
+from ..core.config import config
+
+console = Console()
+
+def main():
+    parser = argparse.ArgumentParser(description="PyEnvDoctor - Gestionnaire d'environnements Python")
+    subparsers = parser.add_subparsers(dest='command')
+
+    # Commande scan
+    scan_parser = subparsers.add_parser('scan', help='Scanner les installations Python')
+    scan_parser.set_defaults(func=handle_scan)
+
+    args = parser.parse_args()
+    if hasattr(args, 'func'):
+        args.func(args)
+    else:
+        parser.print_help()
+
+def handle_scan(args):
+    console.print("[bold green]Démarrage du scan...[/bold green]")
+    scanner = SystemScanner()
+    scanner.scan()
+    
+    installations = scanner.get_installations()
+    console.print(f"\n[bold]Installations trouvées:[/bold] {len(installations)}")
+    for install in installations:
+        console.print(f"• [cyan]{install.path}[/cyan] ({install.provider})")
+
+if __name__ == "__main__":
+    main()
+
+def check():
+    """Run diagnostic checks on Python environments"""
+    print("Running Python environment checks...")
+    # Add your check logic here
+
+def update():
+    """Update PyEnvDoctor"""
+    print("Updating PyEnvDoctor...")
+    # Add your update logic here
+
+def report():
+    """Generate a report of Python installations"""
+    print("Generating environment report...")
+    # Add your report logic here
+
+def check_command(args):
+    """Run diagnostic checks on Python environments"""
+    print("Running Python environment checks...")
+    if args and hasattr(args, 'full') and args.full:
+        print("Performing full diagnostic scan...")
+        # Add comprehensive check logic here
+    else:
+        print("Performing quick check...")
+        # Add quick check logic here
+    
+    if args and hasattr(args, 'report') and args.report:
+        print("Generating diagnostic report...")
+        # Generate report
+
+def update_command(args):
+    """Update PyEnvDoctor"""
+    print("Updating PyEnvDoctor...")
+    if args and hasattr(args, 'silent') and args.silent:
+        # Silent update mode
+        pass
+    else:
+        print("Checking for updates...")
+    # Add update logic here
+
+def report_command(args):
+    """Generate a report of Python installations"""
+    print("Generating environment report...")
+    if args and hasattr(args, 'format'):
+        print(f"Output format: {args.format}")
+    # Add report generation logic here
